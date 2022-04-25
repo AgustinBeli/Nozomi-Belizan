@@ -1,1 +1,74 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.encabezado__global {
+  background-color: #212529;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.encabezado__global img {
+  margin: 0rem 2rem;
+  width: 20rem;
+}
+
+.encabezado__global nav ul {
+  margin: 0em 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.encabezado__global nav ul li {
+  list-style: none;
+}
+
+.encabezado__global nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.encabezado__global nav ul li a:hover {
+  color: #deb887;
+}
+
+.pie__global {
+  background-color: #212529;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie__global a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.pie__global a:hover {
+  color: #deb887;
+}
+
+.pie__global p {
+  color: #ffffff;
+}
+/*# sourceMappingURL=main.css.map */

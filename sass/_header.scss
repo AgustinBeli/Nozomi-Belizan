@@ -1,0 +1,37 @@
+@import 'colores';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.encabezado__global {
+    background-color: $dark;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+        margin: 0rem 2rem;
+        width: 20rem;
+    }
+    nav {
+        ul {
+            margin: 0em 2rem;
+            display: flex;
+            gap: 2rem;
+            li {
+                list-style: none;
+                a {
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-weight: bold;
+                    color: $light;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}

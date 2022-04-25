@@ -1,0 +1,18 @@
+@import 'colores';
+
+.pie__global {
+    background-color: $dark;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        text-decoration: none;
+        color: $light;
+        &:hover {
+            color: $yellow;
+        }
+    }
+    p {
+        color: $light;
+    }
+}
