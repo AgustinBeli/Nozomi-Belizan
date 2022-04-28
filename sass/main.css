@@ -38,7 +38,7 @@
 .encabezado__global nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.5vw;
+  font-size: 50vw;
   font-weight: bold;
   color: #ffffff;
 }
@@ -47,10 +47,9 @@
   color: #deb887;
 }
 
-@media screen and (max-width: 767px) {
-  .encabezado__global nav ul li a {
-    font-size: 2vw;
-  }
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .pie__global {
@@ -69,7 +68,7 @@
 
 .pie__global a {
   margin: 1vw 0vw 0vw 0vw;
-  font-size: 1.5vw;
+  font-size: 1vw;
   text-decoration: none;
   color: #ffffff;
 }
@@ -80,14 +79,8 @@
 
 .pie__global p {
   margin: 1vw 0vw 1vw 0vw;
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: #ffffff;
-}
-
-@media screen and (max-width: 767px) {
-  .pie__global a, .pie__global p {
-    font-size: 2.5vw;
-  }
 }
 
 .medio__index {
@@ -132,28 +125,7 @@
 .medio__nosotros p {
   text-align: center;
   width: 70vw;
-  font-size: 1.5vw;
   font-weight: bold;
-}
-
-@media screen and (max-width: 767px) {
-  body {
-    margin: 0;
-    padding: 0;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 2fr 1fr;
-        grid-template-rows: 1fr 2fr 1fr;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .medio__nosotros p {
-    font-size: 4vw;
-    font-weight: bold;
-  }
 }
 
 .medio__contacto {
@@ -189,7 +161,7 @@
   font-weight: bold;
 }
 
-.medio__carta {
+.medio-carta {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,18 +176,18 @@
   padding: 7vw 5vw;
 }
 
-.medio__carta img {
+.medio-carta img {
   width: 35vw;
 }
 
-.carta__menu {
+.carta-menu {
   width: 350px;
   height: 350px;
   -webkit-perspective: 2000px;
           perspective: 2000px;
 }
 
-.carta__menu .carta__efecto {
+.carta-menu .carta-efecto {
   position: relative;
   width: 100%;
   height: 100%;
@@ -228,24 +200,24 @@
           transform-style: preserve-3d;
 }
 
-.carta__menu .carta__frente, .carta__menu .carta__atras {
+.carta-menu .carta-frente, .carta-menu .carta-atras {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 100%;
+  border-radius: 2vw;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   color: #ffffff;
 }
 
-.carta__menu .carta__frente {
+.carta-menu .carta-frente {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.carta__menu .carta__atras {
-  font-size: 100%;
+.carta-menu .carta-atras {
+  font-size: 5vw;
   text-align: center;
   display: -ms-grid;
   display: grid;
@@ -256,7 +228,7 @@
           transform: rotateY(180deg);
 }
 
-.carta__menu:hover .carta__efecto {
+.carta-menu:hover .carta-efecto {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }

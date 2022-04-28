@@ -28,8 +28,27 @@
     p {
         text-align: center;
         width: 70vw;
+        font-size: 1.5vw;
         font-weight: bold;
     }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+    justify-content: center;
+  }
+  .medio__nosotros { 
+    p {
+      font-size: 4vw;
+      font-weight: bold;
+    }
+  }
+  
 }
 .medio__contacto {
     background-image: url(../img/fondo-madera.jpg);
@@ -56,7 +75,7 @@
         font-weight: bold;
     }
 }
-.medio-carta {
+.medio__carta {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -68,34 +87,34 @@
         width: 35vw;
   }
 }
-.carta-menu {
+.carta__menu {
   width: 350px;
   height: 350px;
   perspective: 2000px;
-  .carta-efecto {
+  .carta__efecto {
     position: relative;
     width: 100%;
     height: 100%;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    border-radius: 25vw;
+    border-radius: 100%;
     transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
     transform-style: preserve-3d;
   }
-  .carta-frente, .carta-atras {
+  .carta__frente, .carta__atras {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 5vw;
+    border-radius: 100%;
     backface-visibility: hidden;
     color: $light;
   }
-  .carta-frente {
+  .carta__frente {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  .carta-atras {
-    font-size: 1vw;
+  .carta__atras {
+    font-size: 100%;
     text-align: center;
     display: grid;
     place-items: center;
@@ -103,7 +122,7 @@
     background-color: $dark;
     transform: rotateY(180deg);
   }
-  &:hover .carta-efecto {
+  &:hover .carta__efecto {
     transform: rotateY(-180deg);
   }
 }

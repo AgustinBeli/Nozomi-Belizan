@@ -1,8 +1,4 @@
 @import 'colores';
-* {
-    margin: 0;
-    padding: 0;
-}
 
 .pie__global {
     background-color: $dark;
@@ -11,7 +7,7 @@
     align-items: center;
     a {
         margin: 1vw 0vw 0vw 0vw;
-        font-size: 1vw;
+        font-size: 1.5vw;
         text-decoration: none;
         color: $light;
         &:hover {
@@ -20,7 +16,15 @@
     }
     p {
         margin: 1vw 0vw 1vw 0vw;
-        font-size: 1vw;
+        font-size: 1.5vw;
         color: $light;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pie__global {
+        a, p {
+            font-size: 2.5vw;
+        }
     }
 }
