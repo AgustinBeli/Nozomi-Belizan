@@ -34,19 +34,24 @@
 }
 
 @media screen and (max-width: 767px) {
-  body {
+  .medio__nosotros, .medio__index, .medio__carta, .medio__contacto {
     margin: 0;
     padding: 0;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    justify-content: center;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
   }
   .medio__nosotros { 
     p {
       font-size: 4vw;
       font-weight: bold;
     }
+  }
+  .medio__index {
+    grid-row: 1/3;
   }
   
 }
