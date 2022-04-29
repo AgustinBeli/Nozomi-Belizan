@@ -1,12 +1,18 @@
 @import 'colores';
 
+$estilos: (
+  color: $dark,
+  fuente: 1.5vw,
+);
+
 * {
     margin: 0;
     padding: 0; 
     font-family: 'Poppins', sans-serif;
 }
+
 .encabezado__global {
-    background-color: $dark;
+    background-color: map-get($estilos, color);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,7 +31,7 @@
                 a {
                     text-transform: uppercase;
                     text-decoration: none;
-                    font-size: 1.5vw;
+                    font-size: map-get($estilos, fuente);
                     font-weight: bold;
                     color: $light;
                     &:hover {

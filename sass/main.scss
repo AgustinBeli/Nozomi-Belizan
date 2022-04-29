@@ -2,16 +2,30 @@
 @import 'header';
 @import 'footer';
 
+@mixin display($tipo, $direccion) {
+  display: $tipo;
+  justify-content: $direccion;
+}
+
+%responsive {
+  display: flex;
+  align-items: center;
+}
+
+
 .medio__index {
   background-image: url(../img/fondo-madera.jpg);
   background-size: cover;
-  display: flex;
-  padding: 3vw 5vw; 
-  justify-content: space-evenly;
+  padding: 3vw 5vw;
+  @include display(flex, space-evenly)
 }
 .medio__carrito {
     background-image: url(../img/fondo-madera.jpg);
     background-size: cover;
+    display: flex;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
     p {
         margin: 0;
         font-weight: bold;
@@ -22,32 +36,38 @@
     background-image: url(../img/fondo-madera.jpg);
     background-size: cover;
     display: flex;
+    height: 80vh;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     padding: 5vw 2vw;
     p {
         text-align: center;
         width: 70vw;
         font-size: 1.5vw;
-        font-weight: bold;
+        font-weight: 900;
     }
 }
 
 @media screen and (max-width: 576px) {
-  .medio__nosotros, .medio__index, .medio__carta, .medio__contacto {
-    margin: 0;
-    padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
+  .medio__index {
+    @extend %responsive;
+    height: 90vh;
   }
-  .medio__nosotros { 
+  .medio__carrito {
+    @extend %responsive;
+    height: 90vh;
+  }
+  .medio__nosotros {
+    @extend %responsive;
+    height: 90vh;
     p {
-      font-size: 4vw;
-      font-weight: bold;
+      font-size: 3vw;
+    }
+  }
+  .medio__contacto {
+    label {
+      font-size: 10vw;
     }
   }
 }
