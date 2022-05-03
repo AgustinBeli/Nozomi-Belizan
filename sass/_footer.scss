@@ -20,11 +20,17 @@
         color: $light;
     }
 }
-
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1200px) {
     .pie__global {
         a, p {
             font-size: 2.5vw;
+        }
+    }
+}
+@media screen and (max-width: 576px) {
+    .pie__global {
+        a, p {
+            font-size: 3vw;
         }
     }
 }

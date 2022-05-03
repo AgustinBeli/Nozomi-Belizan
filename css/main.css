@@ -47,9 +47,15 @@
   color: #deb887;
 }
 
+@media screen and (max-width: 1200px) {
+  .encabezado__global nav ul li a {
+    font-size: 2.5vw;
+  }
+}
+
 @media screen and (max-width: 576px) {
   .encabezado__global nav ul li a {
-    font-size: 2vw;
+    font-size: 3vw;
   }
 }
 
@@ -84,139 +90,44 @@
   color: #ffffff;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 1200px) {
   .pie__global a, .pie__global p {
     font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pie__global a, .pie__global p {
+    font-size: 3vw;
   }
 }
 
 .medio__index {
   background-image: url(../img/fondo-madera.jpg);
   background-size: cover;
-  padding: 3vw 5vw;
+  padding: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bolder;
   display: flex;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
 
-.medio__carrito {
-  background-image: url(../img/fondo-madera.jpg);
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.medio__carrito p {
-  margin: 0;
-  font-weight: bold;
-  text-align: center;
-}
-
-.medio__nosotros {
-  background-image: url(../img/fondo-madera.jpg);
-  background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 80vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 5vw 2vw;
-}
-
-.medio__nosotros p {
-  text-align: center;
-  width: 70vw;
-  font-size: 1.5vw;
-  font-weight: 900;
-}
-
-@media screen and (max-width: 576px) {
-  .medio__index {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 90vh;
-  }
-  .medio__carrito {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 90vh;
-  }
-  .medio__nosotros {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    height: 90vh;
-  }
-  .medio__nosotros p {
-    font-size: 3vw;
-  }
-  .medio__contacto label {
-    font-size: 10vw;
-  }
-}
-
-.medio__contacto {
-  background-image: url(../img/fondo-madera.jpg);
-  background-size: cover;
-  padding: 2vw 10vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.medio__contacto label {
-  font-size: 1vw;
-  font-weight: bolder;
-  color: #212529;
-}
-
-.medio__contacto input {
-  font-size: 1vw;
-  font-weight: bold;
-}
-
-.medio__contacto select {
-  font-size: 1vw;
-}
-
-.medio__contacto option {
-  font-size: 1vw;
-}
-
-.medio__contacto button {
-  font-size: 1vw;
-  font-weight: bold;
+.titular {
+  margin: 1vw 0vw 3vw 0vw;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }
 
 .medio__carta {
@@ -289,5 +200,324 @@
 .carta__menu:hover .carta__efecto {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
+}
+
+.medio__oferta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 2vw;
+  background-image: url(../img/fondo-madera.jpg);
+  background-size: cover;
+  padding: 9vw 5vw;
+}
+
+.medio__oferta img {
+  width: 35vw;
+}
+
+.oferta__menu {
+  width: 350px;
+  height: 350px;
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+}
+
+.oferta__menu .oferta__efecto {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 100%;
+  -webkit-transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+  transition: all 550ms cubic-bezier(0.1, 0.22, 0.8, 1.13);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.oferta__menu .oferta__frente, .oferta__menu .oferta__atras {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  color: #ffffff;
+}
+
+.oferta__menu .oferta__frente {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.oferta__menu .oferta__atras {
+  font-size: 100%;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 5vw;
+  background-color: #212529;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.oferta__menu:hover .oferta__efecto {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.medio__carrito {
+  background-image: url(../img/fondo-madera.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.medio__carrito p {
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+.medio__nosotros {
+  background-image: url(../img/fondo-madera.jpg);
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5vw 2vw;
+}
+
+.medio__nosotros p {
+  text-align: center;
+  width: 70vw;
+  font-size: 1.5vw;
+  font-weight: 900;
+}
+
+.medio__contacto {
+  background-image: url(../img/fondo-madera.jpg);
+  background-size: cover;
+  padding: 2vw 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.medio__contacto label {
+  font-size: 1vw;
+  font-weight: bolder;
+  color: #212529;
+}
+
+.medio__contacto input {
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+.medio__contacto select {
+  font-size: 1vw;
+}
+
+.medio__contacto option {
+  font-size: 1vw;
+}
+
+.medio__contacto button {
+  font-size: 1vw;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  .medio__index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .medio__index .titular {
+    font-size: 5vw;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2vw;
+  }
+  .medio__carta {
+    gap: 10vw;
+    padding: 10vw 1vw;
+  }
+  .carta__menu {
+    width: 300px;
+    height: 300px;
+  }
+  .medio__oferta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15vw;
+    padding: 10vw 1vw;
+  }
+  .oferta__menu {
+    width: 300px;
+    height: 300px;
+  }
+  .medio__carrito {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 90vh;
+  }
+  .medio__nosotros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 85vh;
+  }
+  .medio__nosotros p {
+    font-size: 3vw;
+  }
+  .medio__contacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 75vh;
+  }
+  .medio__contacto label, .medio__contacto input, .medio__contacto button, .medio__contacto select, .medio__contacto option {
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .medio__index {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 90vh;
+  }
+  .medio__index .titular {
+    font-size: 4vw;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  .medio__carta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10vw 10vw;
+    padding: 10vw 1vw;
+  }
+  .medio__carta .carta__atras {
+    font-size: 3vw;
+  }
+  .carta__menu {
+    width: 150px;
+    height: 150px;
+  }
+  .medio__oferta {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15vw;
+    padding: 20vw 1vw;
+  }
+  .medio__oferta .oferta__atras {
+    font-size: 4vw;
+  }
+  .oferta__menu {
+    width: 200px;
+    height: 200px;
+  }
+  .medio__carrito {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 90vh;
+  }
+  .medio__nosotros {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 90vh;
+  }
+  .medio__nosotros p {
+    font-size: 4vw;
+  }
+  .medio__contacto {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 75vh;
+  }
+  .medio__contacto label, .medio__contacto input, .medio__contacto button, .medio__contacto select, .medio__contacto option {
+    font-size: 3vw;
+  }
 }
 /*# sourceMappingURL=main.css.map */
