@@ -80,8 +80,13 @@
   color: #ffffff;
 }
 
+.pie__global a img {
+  width: 1.5vw;
+}
+
 .pie__global a:hover {
-  color: #deb887;
+  -webkit-filter: invert(65%) sepia(89%) saturate(319%) hue-rotate(345deg) brightness(92%) contrast(86%);
+          filter: invert(65%) sepia(89%) saturate(319%) hue-rotate(345deg) brightness(92%) contrast(86%);
 }
 
 .pie__global p {
@@ -94,11 +99,17 @@
   .pie__global a, .pie__global p {
     font-size: 2.5vw;
   }
+  .pie__global a img, .pie__global p img {
+    width: 2.5vw;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .pie__global a, .pie__global p {
     font-size: 3vw;
+  }
+  .pie__global a img, .pie__global p img {
+    width: 3vw;
   }
 }
 
