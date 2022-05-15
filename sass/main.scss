@@ -23,11 +23,22 @@
   font-weight: bolder;
   @include display(flex, space-evenly)
 }
-.titular {
+.medio__titular {
   margin: 1vw 0vw 3vw 0vw;
   padding: 10px;
-  background-color: $light;
+  background-color: bisque;
   border-radius: 10px;
+}
+.medio__wsp {
+  position: fixed;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-top: 790px;
+  margin-left: 1780px;
+  img {
+    width: 200px;
+  }
 }
 // Carta
 
@@ -161,11 +172,21 @@
   justify-content: center;
   align-items: center;
   padding: 5vw 2vw;
-  p {
+  .medio__texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50vw;
+    background-color: bisque;
+    border-radius: 2.5%;
+    padding: 30px;
+    p {
+      width: 100%;
+      height: 100%;
       text-align: center;
-      width: 70vw;
       font-size: 1.5vw;
       font-weight: 900;
+    }
   }
 }
 
@@ -199,12 +220,19 @@
 
 // Responsive
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 768px) {
   .medio__index {
     display: flex;
     align-items: center;
     height: 100vh;
-    .titular {
+    .medio__wsp {
+      margin-top: 78vh;
+      margin-left: 90vw;
+      img {
+        width: 15vw;
+      }
+    }
+    .medio__titular {
       font-size: 5vw;
       font-weight: 900;
       text-align: center;
@@ -239,8 +267,11 @@
     display: flex;
     align-items: center;
     height: 85vh;
-    p {
-      font-size: 3vw;
+    .medio__texto {
+      width: 80%;
+      p {
+        font-size: 2.7vw;
+      }
     }
   }
   .medio__contacto {
@@ -257,7 +288,10 @@
     display: flex;
     align-items: center;
     height: 90vh;
-    .titular {
+    .medio__wsp {
+      margin-top: 96vh;
+    }
+    .medio__titular {
       font-size: 4vw;
       font-weight: 900;
       text-align: center;
@@ -300,8 +334,11 @@
     display: flex;
     align-items: center;
     height: 90vh;
-    p {
-      font-size: 4vw;
+    .medio__texto {
+      width: 90%;
+      p {
+        font-size: 3.6vw;
+      }
     }
   }
   .medio__contacto {
